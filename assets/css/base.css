@@ -1,0 +1,47 @@
+:root {
+    --primary-color: rgb(245, 45, 45);
+    --primary-color-rgba: rgba(245, 45, 45, 0.08);
+    --while-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* 10px <==> 1rem */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Animation */
+@keyframes faceIn{
+    from {
+        opacity: 0;
+        /* width: 0 ; */
+    }
+    to {
+        opacity: 1;
+        /* width: 100% fit-content; */
+    }
+}
+
