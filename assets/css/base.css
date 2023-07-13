@@ -51,10 +51,12 @@ html {
 
 @keyframes growth {
     from {
-        transform: scale(var(--growth-from));
+        transform: scale(0);
+        opacity: 0;
     }
     to {
-        transform: scale(var(--growth-to));
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
