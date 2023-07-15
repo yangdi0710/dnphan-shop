@@ -55,7 +55,7 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 }
 
@@ -94,6 +94,85 @@
 .header__navbar-title--no-pointer {
     cursor: text;
     color: var(--while-color);
+}
+
+/* Header User */
+.header__navbar-user {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header__navbar-user:hover 
+.header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-img {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header__navbar-user-name {
+    margin-left: 8px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* Header User Menu */
+.header__navbar-user-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: var(--while-color);
+    width: 150px;
+    padding-left: 0;
+    box-shadow: 0 2px 3px #d4d4d4;
+    border-radius: 2px;
+    z-index: 1;
+    display: none;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: 0;
+    width: 150px;
+    height: 12px;
+}
+
+.header__navbar-user-menu::after {
+    content: "";
+    position: absolute;
+    top: -24px;
+    right: 18px;
+    border-style: solid;
+    border-width: 12px 14px;
+    border-color: transparent transparent var(--while-color) transparent;}
+
+.header__navbar-user-item {
+    list-style: none;
+}
+
+.header__navbar-user-item a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding: 10px 16px;
+}
+
+.header__navbar-user-item:hover {
+    background-color: #e8e8e8;
+}
+
+.header__navbar-user-item:last-child a {
+    font-weight: 500;
 }
 
 /* Header QR Code */
