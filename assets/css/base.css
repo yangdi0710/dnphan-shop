@@ -164,6 +164,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    box-shadow: 1px 1px 1px #ccc;
 }
 
 .select-input-icon {
@@ -171,4 +173,31 @@ html {
     color: #4a4a4a;
     position: relative;
     bottom: 1px;
+}
+
+/* List Option */
+.select-input__list {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    left: 0;
+    list-style: none;
+    background-color: var(--while-color);
+    border-radius: 2px;
+    padding-left: 0;
+    display: none;
+}
+
+.select-input__link {
+    display: block;
+    padding: 8px 12px;
+    margin: 6px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+    cursor: pointer;
 }
