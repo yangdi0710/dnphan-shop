@@ -117,7 +117,7 @@ html {
     cursor: pointer;
     color: var(--text-color);
     background-color: var(--while-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -126,7 +126,7 @@ html {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.btn.btn-primary {
+.btn.btn--primary {
     color: var(--while-color);
     background-color: var(--primary-color);
 }
@@ -153,3 +153,22 @@ html {
     padding-right: 28px;
 }
 
+/* Selection */
+
+.select-input {
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--while-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-input-icon {
+    font-size: 1rem;
+    color: #4a4a4a;
+    position: relative;
+    bottom: 1px;
+}
