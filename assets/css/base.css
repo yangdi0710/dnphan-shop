@@ -173,6 +173,7 @@ html {
     align-items: center;
     position: relative;
     box-shadow: 1px 1px 1px #ccc;
+    z-index: 1;
 }
 
 .select-input-icon {
@@ -208,3 +209,44 @@ html {
     color: var(--primary-color);
     cursor: pointer;
 }
+
+/* Pagination UI */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.home-pagination {
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--while-color);
+}
+
+.pagination-item--active:hover .pagination-item__link {
+    opacity: 0.9;
+}
+
+.pagination-item__link {
+    --heigh: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    min-width: 40px;
+    height: var(--heigh);
+    text-align: center;
+    line-height: var(--heigh);
+    border-radius: 2px;
+    color: #8e8e8e;
+    font-weight: 400;
+}
+
