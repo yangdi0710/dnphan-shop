@@ -1,5 +1,4 @@
 .header {
-    height: 120px;
     background-image: linear-gradient(-180deg, #f53d2d, #f63);
 }
 
@@ -785,8 +784,8 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
-    height: 40vh;
-    overflow-y: scroll;
+    max-height: 40vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -1254,9 +1253,14 @@
     padding-left: 0;
 }
 
-.footer__item-link:hover i,
-.footer__item-link:hover{
+.footer__item {
+    display: flex;
+}
+
+.footer__item-link:hover,
+.footer__item-link:hover .footer__item-icon {
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 .footer__item-link {
@@ -1264,6 +1268,9 @@
     text-decoration: none;
     font-size: 14px;
     line-height: 3rem;
+}
+
+.footer__item-link-follow {
     display: flex;
     align-items: center;
 }
@@ -1272,6 +1279,7 @@
     font-size: 1.8rem;
     padding-right: 12px;
     color: #737373;
+    margin-top: 1px;
 }
 
 .footer__download {
