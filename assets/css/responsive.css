@@ -1,10 +1,5 @@
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
-    :root {
-        --header-height: 68px;
-        --navbar-height: 0px;
-    }
-
     .hide-on-mobile-tablet {
         display: none;
     }
@@ -44,10 +39,24 @@
     .header__sort-bar {
         display: flex;
     }
+        
+    .app__content {
+        padding-top: 8px;
+        margin: 0;
+    }
+
+    .mobile-category {
+        display: block;
+    }
 }
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
     .hide-on-tablet {
         display: none;
     }
@@ -56,10 +65,24 @@
         width: 68px;
         text-align: right;
     }
+
+    .footer__download-apps {
+        margin-left: 10px;
+        padding: 8px 0;
+    }
+
+    .footer__download-app-img {
+        height: 20px;
+    }
 }
 
 /* Mobile */
 @media (max-width: 739px) {
+    :root {
+        --header-height: 56px;
+        --navbar-height: 0px;
+    }
+
     .hide-on-mobile {
         display: none;
     }
@@ -84,18 +107,33 @@
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
         padding: 0 16px;
-        animation: mobileSearchSideIn linear 0.3s;
+        animation: mobileSearchSideIn linear 0.2s;
         display: none;
+    }
+
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            height: 0;
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
     }
 
     .header__mobile-search {
         display: block;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .header__mobile-search,
     .header__logo, .header__cart{
         flex: 1;
-        text-align: center;
+    }
+
+    .header__cart {
+        margin-right: -30px;
     }
 
     .header__search-history {
@@ -109,15 +147,30 @@
     .header__search-option {
         top: 138%;
     }
-    @keyframes mobileSearchSideIn {
-        from {
-            opacity: 0;
-            top: calc(var(--header-height)/2);
-        }
-        to {
-            opacity: 1;
-            top: var(--header-height);
-        }
+
+    .pagination-item {
+        margin: 0;
+    }
+
+    .pagination-item__link {
+        min-width: 34px;
+        font-size: 1.4rem;
+    }
+
+    .app__container {
+        padding: 0 8px;
+    }
+
+    .header__logo-img {
+        width: 110px;
+    }
+
+    .footer__content {
+        padding: 12px 24px;
+    }
+
+    .footer__heading {
+        padding: 26px 0px 8px;
     }
 
 }
