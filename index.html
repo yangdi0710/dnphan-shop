@@ -125,12 +125,32 @@
                         </li>
                     </ul>
                 </nav>
+
+                <!-- Header Sort Bar -->
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link header__sort-item--active">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+                </ul>
                 
                 <!-- Header with search -->
                 <div class="header-with-search">
 
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-sharp fa-solid fa-magnifying-glass"></i>
+                    </label>
+
                     <!-- Header Logo -->
-                    <div class="header__logo hide-on-mobile-tablet">
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -141,6 +161,8 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <!-- Search Layout -->
                     <div class="header__search">
